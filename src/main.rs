@@ -1,6 +1,7 @@
 use colored::*;
 use rand::Rng;
 use std::cmp::Ordering;
+use std::collections::HashMap;
 use std::io;
 
 fn main() {
@@ -52,5 +53,14 @@ fn main() {
 
     for c in s.bytes() {
         println!("{}", c);
+    }
+
+    let mut scores = HashMap::new();
+
+    scores.insert(String::from("Blue"), 10);
+    scores.insert(String::from("Yellow"), 50);
+
+    for (key, value) in &scores {
+        println!("{}: {}", key, value);
     }
 }
