@@ -35,4 +35,16 @@ fn main() {
             }
         }
     }
+
+    let mut v = vec![1, 2, 3, 4, 5];
+
+    let third: &i32 = &v[2];
+    println!("The third element is {}", third);
+
+    v.push(6);
+
+    match v.get(4) {
+        Some(third) => println!("The fifth is {}", third),
+        None => println!("There is no fifth element. "),
+    }
 }
