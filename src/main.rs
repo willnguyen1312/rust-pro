@@ -47,4 +47,10 @@ fn main() {
         Some(third) => println!("The fifth is {}", third),
         None => println!("There is no fifth element. "),
     }
+
+    let s = String::from("hello world");
+
+    for c in s.bytes() {
+        println!("{}", c);
+    }
 }
