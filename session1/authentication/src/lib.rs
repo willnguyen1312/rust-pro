@@ -1,14 +1,25 @@
-pub fn add(left: usize, right: usize) -> usize {
-    left + right
+pub fn read_line() -> String {
+    // <- Public function
+    let mut input = String::new();
+    std::io::stdin()
+        .read_line(&mut input)
+        .expect("Failed to read line");
+    input.trim().to_string()
+}
+
+/// The version of the login that is a simple username and password
+pub fn login_simple(username: &str, password: &str) -> bool {
+    username.to_lowercase() == "admin" && password == "password"
 }
 
 #[cfg(test)]
-mod tests {
+mod test {
     use super::*;
 
     #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
+    fn test_login_simple() {
+        assert!(login_simple("admin", "password"));
+        assert!(!login_simple("admin", "wrong"));
+        assert!(!login_simple("wrong", "password"));
     }
 }
