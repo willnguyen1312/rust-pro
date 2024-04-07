@@ -1,7 +1,5 @@
-workspace = { members = ["session1/hello_world", "session1/variables"] }
-
 [package]
-name = "rust-pro"
+name = "variables"
 version = "0.1.0"
 edition = "2021"
 
