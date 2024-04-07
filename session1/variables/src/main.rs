@@ -1,7 +1,11 @@
+fn read_line() -> String {
+    let mut input = String::new();
+    std::io::stdin().read_line(&mut input).unwrap();
+    input.trim().to_string()
+}
+
 fn main() {
-    let mut n = 5;
-    {
-        n += 1;
-    }
-    println!("The value of n is: {}", n);
+    println!("What is your name?");
+    let name = read_line();
+    println!("Hello, {}!", name);
 }
