@@ -30,5 +30,9 @@ name = "rust-pro"
 version = "0.1.0"
 
 [[package]]
+name = "thread_builder"
+version = "0.1.0"
+
+[[package]]
 name = "variables"
 version = "0.1.0"
