@@ -1,11 +1,16 @@
-fn hello_from_thread() {
-    println!("Hello from thread");
+fn hello_from_thread(i: u32) {
+    // This will print the thread id
+    println!("Hello from thread {}", i);
 }
 
 fn main() {
     println!("Hello from main thread");
 
-    let thread_handler = std::thread::spawn(hello_from_thread);
+    let mut threads = Vec::new();
 
-    thread_handler.join().unwrap();
+    for i in 0..5 {
+        threads.push(std::thread::spawn(move || hello_from_thread(i)));
+    }
+
+    threads.into_iter().for_each(|t| t.join().unwrap());
 }
