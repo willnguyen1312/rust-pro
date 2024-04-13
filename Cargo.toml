@@ -1,7 +1,7 @@
 workspace = { members = [
     "session1/authentication",
     "session1/hello_world", "session1/login",
-    "session1/variables", "session2/hello",
+    "session1/variables", "session2/divide_work", "session2/hello",
 ] }
 
 [package]
