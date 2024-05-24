@@ -1,4 +1,4 @@
-workspace = { members = ["examples/hello_world", "examples/primitives"] }
+workspace = { members = ["examples/hello_world", "examples/playground", "examples/primitives"] }
 
 [package]
 name = "rust-pro"
